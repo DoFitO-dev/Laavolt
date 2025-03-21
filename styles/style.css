@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Butterfly Kids", cursive;
+}
+
+body {
+    background-color: rgb(18, 18, 18);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+    max-width: 2000px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-content .logo img{
+    width: 120px;
+    height: 120px;
+}
+
+.nav-content .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-content .nav-links li a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-content .nav-links li a:hover {
+    color: #f2f2f2;
+}
+
+section {
+    height: 80vh;
+    width: 100vh;
+    background-color: transparent;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
