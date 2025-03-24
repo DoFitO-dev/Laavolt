@@ -12,12 +12,12 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Poppins', sans-serif;
-    cursor: url(/images/pointercursor.png), auto;
+    cursor: url(./images/pointercursor.png), auto;
 }
 
 @font-face {
     font-family: Minecraft;
-    src: url("/fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
+    src: url("./fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
 }
 
 html {
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    background-image: url("/images/img.jpg");
+    background-image: url("./images/img.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
