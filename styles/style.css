@@ -2,72 +2,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: "Butterfly Kids", cursive;
+    font-family: 'Poppins', sans-serif;
+    cursor: url(/images/pointercursor.png), auto;
+}
+
+@font-face {
+    font-family: Minecraft;
+    src: url("/fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(18, 18, 18);
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-}
-
-nav .nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    height: 100%;
-    max-width: 2000px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.nav-content .logo img{
-    width: 120px;
-    height: 120px;
-}
-
-.nav-content .nav-links{
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
-
-.nav-content .nav-links li a {
-    font-size: 30px;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.nav-content .nav-links li a:hover {
-    color: #f2f2f2;
+    background-image: url("/images/img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 section {
-    height: 80vh;
-    width: 100vh;
-    background-color: transparent;
+    width: 100%;
+    height: 100vh;
 }
 
-.bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero-content p {
+    border: 3px solid #ffffff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.hero-content p span{
+    font-family: 'JetBrainsMono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+button {
+    font-family: Minecraft;
+    letter-spacing: 1px;
+    position: relative;
+    color: #ffffff;
+    padding: 1em 2em;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: 0.3s ease all;
+}
+
+button:hover {
+    box-shadow: 5px 0px 100px 10px rgba(255, 255, 255, .2);
+
+}
+
+i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+
+
+
