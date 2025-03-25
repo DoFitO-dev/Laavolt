@@ -19,14 +19,84 @@
                 <br>
                 <h3>IP:</h3>
                 <br>
-                <p><span>eur-hygiene.joinmc.link</span></p>
+
+
+                <div class="ip tooltip">
+                    <p>
+                        <span id="myInput" onclick="copyToClipboard()" onmouseout="hideTooltip()">eur-hygiene.joinmc.link</span>
+                        <span class="tooltip-text">Click To Copy</span>
+                    </p>
+                </div>
+
+
                 <br>
-                <a href="#"><button><i class='bx bxl-discord-alt'></i></button></a>
+                <a href="https://dsc.gg/laavolt"><button class="dc"><i class='bx bxl-discord-alt'></i></button></a>
             </div>
         </div>
     </section>
 
+    <section class="faq">
+        <div class="container">
+            <h1>FAQ</h1>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>What is LaavoltSMP?</h3>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="faq-answer">
+                    <p>LaavoltSMP is a Minecraft server that offers a unique gameplay experience with various features and a friendly community.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>How do I join the server?</h3>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can join the server by entering the IP address in your Minecraft client.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>What are the server rules?</h3>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The server rules include no cheating, respect other players, and follow the community guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>
+function copyToClipboard() {
+    // Get the text content of the span
+    var copyText = document.getElementById("myInput").innerText;
+
+    // Copy the text to clipboard
+    navigator.clipboard.writeText(copyText);
+
+    // Optionally, you can display a confirmation message
+    alert("Copied to clipboard: " + copyText);
+}
+
+function toggleAnswer(element) {
+    const answer = element.nextElementSibling; // Get the next sibling (the answer)
+    
+    // Toggle display of the answer
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        element.querySelector('i').classList.remove('bx-chevron-up');
+        element.querySelector('i').classList.add('bx-chevron-down');
+    } else {
+        answer.style.display = "block";
+        element.querySelector('i').classList.remove('bx-chevron-down');
+        element.querySelector('i').classList.add('bx-chevron-up');
+    }
+}
+</script>
 
 </body>
 </html>

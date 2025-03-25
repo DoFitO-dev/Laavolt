@@ -54,15 +54,24 @@ section {
 }
 
 .hero-content p {
-    border: 3px solid #ffffff;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 10px 20px;
-    border-radius: 50px;
+    font-family: Minecraft;
+    letter-spacing: 1px;
+    position: relative;
+    color: #ffffff;
+    padding: 1em 2em;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    border-radius: 20px;
     background-color: transparent;
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, .2);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: 0.3s ease all;
+}
+
+.hero-content p:hover {
+    box-shadow: 5px 0px 100px 10px rgba(255, 255, 255, .2);
 }
 
 .hero-content p span{
@@ -72,7 +81,7 @@ section {
     color: #ffffff;
 }
 
-button {
+.dc {
     font-family: Minecraft;
     letter-spacing: 1px;
     position: relative;
@@ -88,7 +97,7 @@ button {
     transition: 0.3s ease all;
 }
 
-button:hover {
+.dc:hover {
     box-shadow: 5px 0px 100px 10px rgba(255, 255, 255, .2);
 
 }
@@ -96,6 +105,82 @@ button:hover {
 i {
     color: #ffffff;
     font-size: 30px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    font-family: "JetBrainsMono", monospace;
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 108%; /* Position above the text */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Fade effect */
+}
+
+#myInput:hover + .tooltip-text {
+    visibility: visible;
+    opacity: 0.8; /* Show tooltip on hover */
+}
+
+
+/*Section2*/
+
+.faq {
+    background-color: transparent;
+    padding: 50px 20px;
+    margin-top: 20px;
+}
+
+.faq h1 {
+    font-family: "JetBrainsMono", monospace;
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.faq-answer {
+    display: none; /* Initially hidden */
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #ffffff;
 }
 
 
