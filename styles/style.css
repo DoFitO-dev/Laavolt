@@ -338,6 +338,12 @@ footer {
     margin-bottom: 10px;
     color: #ffffff;
 }
+
+.footer-content .dofii {
+    font-family: MC;
+}
+
+
 .footer-content .dofii:hover {
     text-decoration: underline;
 }
