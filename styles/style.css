@@ -16,7 +16,7 @@
 }
 
 @font-face {
-    font-family: Minecraft;
+    font-family: MC;
     src: url("../fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
 }
 
@@ -54,7 +54,7 @@ section {
 }
 
 .hero-content p {
-    font-family: Minecraft;
+    font-family: MC;
     letter-spacing: 1px;
     position: relative;
     color: #ffffff;
@@ -75,7 +75,7 @@ section {
 }
 
 .hero-content p span{
-    font-family: 'JetBrainsMono', monospace;
+    font-family: MC;
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
@@ -138,13 +138,16 @@ i {
 
 /*Section2*/
 
-.faq {
-    background-color: transparent;
+.main {
+    /*background-color: #340068;*/
     padding: 50px 20px;
-    margin-top: 20px;
 }
 
-.faq h1 {
+/*section:has(.box[data-color="clr1"]:hover) {
+    background-color: #6229b8;
+}*/
+
+.main h1 {
     font-family: "JetBrainsMono", monospace;
     text-align: center;
     font-size: 36px;
@@ -182,6 +185,172 @@ i {
     margin: 0;
     color: #ffffff;
 }
+
+/*Staff*/
+.staff-main {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.staff-con {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.box .imgbx {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    box-shadow: -10px 10px 100px #6229b8;
+}
+
+.box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.box:hover .imgbx img {
+    opacity: 0.5;
+}
+
+.staff-con .box .glass {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#fff2,transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    scale: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.staff-con .box .glass::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.staff-con .box:hover {
+    transform: rotate(-15deg);
+}
+
+.staff-con .box:hover .glass {
+    opacity: 1;
+    scale: 1;
+    transform: rotate(30deg);
+}
+
+.staff-con .box .glass h3 {
+    font-size: 1.25em;
+    color: #fafafa;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+.staff-con .box .glass h3 span {
+    font-weight: 400;
+    font-size: 0.5em;
+}
+
+.staff-con .box ul {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.staff-con .box ul a {
+    color: #fff8;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.25s;
+    transition-delay: scale calc(0.2s * var(--i));
+}
+
+.staff-con .box:hover ul a {
+    scale: 1;
+}
+
+.staff-con .box ul a:hover {
+    color: #123112;
+}
+
+
+
+
+
+
+
+/*Footer*/
+
+footer {
+    background-color: #340068;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h1 {
+    font-family: MC;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.footer-content .dofii:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    font-family: MC;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+
+
+
 
 
 
