@@ -119,18 +119,11 @@ function copyToClipboard() {
 }
 
 function toggleAnswer(element) {
-    const answer = element.nextElementSibling; // Get the next sibling (the answer)
-    
-    // Toggle display of the answer
-    if (answer.style.display === "block") {
-        answer.style.display = "none";
-        element.querySelector('i').classList.remove('bx-chevron-up');
-        element.querySelector('i').classList.add('bx-chevron-down');
-    } else {
-        answer.style.display = "block";
-        element.querySelector('i').classList.remove('bx-chevron-down');
-        element.querySelector('i').classList.add('bx-chevron-up');
-    }
+    const answer = element.nextElementSibling;
+    answer.classList.toggle('open');
+    const icon = element.querySelector('i');
+    icon.classList.toggle('bx-chevron-down');
+    icon.classList.toggle('bx-chevron-up');
 }
 </script>
 
