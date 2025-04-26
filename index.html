@@ -25,8 +25,9 @@
 
                 <div class="ip tooltip">
                     <p>
-                        <span id="myInput" onclick="copyToClipboard()" onmouseout="hideTooltip()">mc.laavolt.fun</span>
-                        <span class="tooltip-text">Click To Copy</span>                    </p>
+                        <span id="myInput" onclick="copyToClipboard()" onmouseout="hideTooltip()" class="ipaddr">mc.laavolt.fun</span>
+                        <span class="tooltip-text">Click To Copy</span>
+                    </p>
                 </div>
 
 
@@ -75,25 +76,29 @@
                 </div>
                 <div class="faq-answer">
                     <p>
-                        
-                        <b>1.</b> Go to search in windows and search view network connections
+                        <p><b>1.</b> Go to search in windows 🔍 and search view network connections 🖥️.</p>
+
+                        <p><b>2.</b> Right click your network connection 🛜 and select properties ⚙️.</p>
+
+                        <p><b>3.</b> In that scroll down until you see internet protocol version 4 ✅ and version 6, now disable version 6 ❌ and double click internet protocol ver 4 (do not disable ver 4 or your internet will be lost 🔻).</p>
+
+                        <p><b>4.</b> Click on the option "Use the following DNS server addresses" and  in that type:
                         <br>
-                        <b>2.</b> Right click your network connection and select properties
+                        <span class="dns">
+                        <b><span style="text-decoration: underline;">Preffered DNS Server</span>:</b> 1.1.1.1
                         <br>
-                        <b>3.</b> In that scroll down until you see internet protocol version 4 and version 6, disable 6 and double click internet protocol ver 4 (do not disable it your internet willl be lost).
-                        <br>
-                        <b>4.</b> Click on the option "use the following DNS server addresses" and type in that 
-                        <br>
-                        <b>Preffered DNS Server:</b> 1.1.1.1
-                        <br>
-                        <b>Alternate DNS Server:</b> 1.0.0.1
-                        <br>
-                        <b>5.</b> Then click ok and restart your pc</p>
+                        <b><span style="text-decoration: underline;">Alternate DNS Server</span>:</b> 1.0.0.1
+                        </span></p>
+
+                        <p><b>5.</b> Then click ok and restart your pc</p>
+
+                        <p><b>Problem didn't get fixed?</b> Try reaching to us through our <a href="https://dsc.gg/laavolt" style="text-decoration: underline; color: #fb60a8;">Discord Server</a>.</p>
+
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <footer>
         <div class="container">
@@ -104,7 +109,6 @@
         </div>
     </footer>
     
-
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script>
 function copyToClipboard() {
@@ -126,7 +130,6 @@ function toggleAnswer(element) {
     icon.classList.toggle('bx-chevron-up');
 }
 </script>
-
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

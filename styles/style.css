@@ -19,6 +19,14 @@
     font-family: MC;
     src: url("../fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
 }
+@font-face {
+    font-family: MCBold;
+    src: url("../fonts/minecraft-font/MinecraftBold-nMK1.otf");
+}
+@font-face {
+    font-family: MCItalics;
+    src: url("../fonts/minecraft-font/MinecraftItalic-R8Mo.otf");
+}
 
 html {
     scroll-behavior: smooth;
@@ -82,7 +90,7 @@ section {
 }
 
 .dc {
-    font-family: Minecraft;
+    font-family: MC;
     letter-spacing: 1px;
     position: relative;
     color: #ffffff;
@@ -133,6 +141,10 @@ i {
 #myInput:hover + .tooltip-text {
     visibility: visible;
     opacity: 0.8; /* Show tooltip on hover */
+}
+
+.ip .ipaddr {
+    font-weight: 100;
 }
 
 
@@ -188,6 +200,7 @@ i {
     color: #ffffff;
     opacity: 0; /* Initially hidden */
     line-height: 30px;
+    margin-bottom: 15px;
     transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
 }
 
@@ -196,8 +209,8 @@ i {
 }
 
 .faq-answer.open {
-    max-height: 500px; /* Or adjust as needed */
-    padding: 15px; /* Add padding when open */
+    max-height: 600px; /* Or adjust as needed */
+    padding:15px; /* Add padding when open */
 }
 
 .faq-answer.open p {
@@ -335,12 +348,6 @@ i {
 .staff-con .box ul a:hover {
     color: #123112;
 }
-
-
-
-
-
-
 
 /*Footer*/
 
