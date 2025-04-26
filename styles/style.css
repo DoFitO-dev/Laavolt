@@ -310,7 +310,7 @@ i {
 }
 
 .staff-con .box .glass h3 {
-    font-size: 1.25em;
+    font-size: 2em;
     color: #fafafa;
     font-weight: 500;
     text-transform: uppercase;
@@ -334,8 +334,7 @@ i {
 }
 
 .staff-con .box ul a {
-    color: #fff8;
-    font-size: 1.25em;
+    font-size: 1.3em;
     scale: 0;
     transition: 0.25s;
     transition-delay: scale calc(0.2s * var(--i));
