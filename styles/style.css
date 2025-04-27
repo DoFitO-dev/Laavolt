@@ -45,6 +45,47 @@ section {
     height: 100vh;
 }
 
+header {
+    justify-content: center;
+    align-items: center;
+}
+
+header .top{
+    text-align: right;
+    margin: 20px;
+}
+
+header a {
+    font-family: MC;
+    font-size: large;
+    color: #fff2f2;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header button {
+    font-family: MC;
+    letter-spacing: 1px;
+    position: relative;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s ease all;
+    text-decoration: underline;
+}
+
+header button:hover {
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
 .hero {
     display: flex;
     justify-content: center;
