@@ -62,7 +62,11 @@ header a {
     text-decoration: none;
 }
 
-header a:hover {
+header a button {
+    text-decoration: none;
+}
+
+header a button:hover {
     text-decoration: underline;
 }
 
@@ -207,6 +211,10 @@ i {
     color: #ffffff;
     margin-bottom: 30px;
 }
+.faq-main {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
 
 .faq-item {
     margin-bottom: 15px;
@@ -233,9 +241,10 @@ i {
     border-radius: 8px;
     max-height: 0; /* Initially collapsed */
     overflow: hidden; /* Hide overflowing content */
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin-bottom 0.3s ease;
     padding: 0 15px; /* Add horizontal padding */
 }
+
 
 .faq-answer p {
     color: #ffffff;
@@ -392,9 +401,12 @@ i {
 /*Footer*/
 
 footer {
-    background-color: #340068;
+    z-index: 999;
+    bottom: auto;
+    background: #340068;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     padding: 20px 0;
+    height: auto;
 }
 
 .footer-content {
@@ -424,9 +436,23 @@ footer {
 }
 
 
+@media screen and (max-width: 500px) {
+    .faq-item {
+        margin-bottom: 100px; /* space to prevent overlap with fixed footer */
+    }
+    .faq-main {
+        margin-bottom: 100px;
+    }
+}
 
+@media screen and (max-width: 380px) {
+    .faq-main {
+        font-size: 13px;
+        margin-bottom: 100px;
+    }
 
-
-
-
-
+    .faq-answer p {
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+}
