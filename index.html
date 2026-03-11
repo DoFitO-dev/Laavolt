@@ -16,24 +16,35 @@
 
     <header>
         <div class="top">
-            <a href="https://status.laavolt.fun"><button>Status</button>🔋</a>
+
+            <button><a href="./map.html" class="nav-links"><span>Geology</span>⛰️</a></button>
+            <button><a id="server-status" href="https://status.laavolt.fun" class="nav-links"><span>Status</span><span id="status-emoji">🔋</span></a></button>
+
         </div>
     </header>
 
     <section class="hero">
         <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
             <div class="hero-content">
-                <h1><img src="./images/model.png" alt="logo" style="width: 25%;"></h1>
+                <h1><img src="./images/model-cold.png" alt="logo" style="width: 25%;"></h1>
                 <br>
-                <h3>IP:</h3>
                 <br>
 
 
                 <div class="ip tooltip">
-                    <p>
-                        <span id="myInput" onclick="copyToClipboard()" onmouseout="hideTooltip()" class="ipaddr">mc.laavolt.fun</span>
-                        <span class="tooltip-text">Click To Copy</span>
+
+                    <h3>Main IP:</h3>
+                    <p  id="myInput" onclick="copyToClipboard()" onmouseout="hideTooltip()" class="ipaddr">
+                        <span>play.laavolt.fun</span>
                     </p>
+                    <span class="tooltip-text">Click To Copy</span>
+                    
+                    <h3>Secondary IP:</h3>
+                    <p id="myInput2" onclick="copyToClipboard2()" onmouseout="hideTooltip()" class="ipaddr">
+                        <span>increase-unscented.gl.joinmc.link</span>
+                    </p>
+                    <span class="tooltip-text">Click To Copy</span>
+
                 </div>
 
 
@@ -50,22 +61,24 @@
                 <div class="staff-con">
 
                     <div class="box" data-color="clr1">
-                        <div class="imgbx"><img src="./images/dofi2.png" alt="Dofi | Owner"></div>
+                        <div class="imgbx"><img src="./images/dofipfp.jpg" alt="Dofi | Owner"></div>
                         <div class="glass">
                             <h3>Dofii<br><span>Owner</span></h3>
                             <ul>
                                 <a href="https://www.instagram.com/dofito20/" style="--i:1; color: #fb60a8;"><ion-icon name="logo-instagram"></ion-icon></a>
                                 <a href="https://www.youtube.com/@dofii2o" style="--i:2; color: #fb6060;"><ion-icon name="logo-youtube"></ion-icon></a>
+                                <a href="https://github.com/DoFitO-dev" style="--i:2; color: #161616;"><ion-icon name="logo-github"></ion-icon></a>
+                                
                             </ul>
                         </div>
                     </div>
                     <div class="box" data-color="clr2">
-                        <div class="imgbx"><img src="./images/nyx2.png" alt="Nyx | Admin"></div>
+                        <div class="imgbx"><img src="./images/nyxer.jpg" alt="Nyx | Admin"></div>
                         <div class="glass">
                             <h3>Nyx<br><span>Admin</span></h3>
                             <ul>
-                                <a href="https://www.instagram.com/adwaaaithhh/" style="--i:3; color: #fb60a8;"><ion-icon name="logo-instagram"></ion-icon></a>
-                                <a href="https://dsc.gg/nyxagency" style="--i:4; color: #7289DA;"><ion-icon name="logo-discord"></ion-icon></a>
+                                <a href="https://www.instagram.com/adwaaiithh.h/" style="--i:3; color: #fb60a8;"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="https://github.com/nyxsqoyar" style="--i:4; color: #161616;"><ion-icon name="logo-github"></ion-icon></a>
                             </ul>
                         </div>
                     </div>
@@ -88,7 +101,7 @@
 
                         <p><b>2.</b> Right click your network connection 🛜 and select properties ⚙️.</p>
 
-                        <p><b>3.</b> In that scroll down until you see internet protocol version 4 ✅ and version 6, now disable version 6 ❌ and double click internet protocol ver 4 (do not disable ver 4 or your internet will be lost 🔻).</p>
+                        <p><b>3.</b> In that scroll down until you see internet protocol version 4 ✅ and version 6✅, now double click internet protocol ver 4 (do not disable ver 4 or your internet will be lost 🔻).</p>
 
                         <p><b>4.</b> Click on the option "Use the following DNS server addresses" and  in that type:
                         <br>
@@ -98,7 +111,7 @@
                         <b><span style="text-decoration: underline;">Alternate DNS Server</span>:</b> 1.0.0.1
                         </span></p>
 
-                        <p><b>5.</b> Then click ok and restart your pc</p>
+                        <p><b>5.</b> Then click ok.</p>
 
                         <p><b>Problem didn't get fixed?</b> Try reaching to us through our <a href="https://dsc.gg/laavolt" style="text-decoration: underline; color: #74abd8;">Discord Server</a>.</p>
 
@@ -111,8 +124,8 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <h1>By <span class="dofii">Dofii</span></h1>
-                <p>© 2025 LaavoltSMP. All rights reserved.</p>
+                <h1>By <span class="dofii">Dofii</span>❤️</h1>
+                <p>© 2026 LaavoltSMP. Some rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -130,6 +143,17 @@ function copyToClipboard() {
     alert("Copied to clipboard: " + copyText);
 }
 
+function copyToClipboard2() {
+    // Get the text content of the span
+    var copyText2 = document.getElementById("myInput2").innerText;
+
+    // Copy the text to clipboard
+    navigator.clipboard.writeText(copyText2);
+
+    // Optionally, you can display a confirmation message
+    alert("Copied to clipboard: " + copyText2);
+}
+
 function toggleAnswer(element) {
     const answer = element.nextElementSibling;
     answer.classList.toggle('open');
@@ -137,6 +161,18 @@ function toggleAnswer(element) {
     icon.classList.toggle('bx-chevron-down');
     icon.classList.toggle('bx-chevron-up');
 }
+
+fetch("https://api.mcstatus.io/v2/status/java/increase-unscented.gl.joinmc.link")
+.then(res => res.json())
+.then(data => {
+    const emoji = document.getElementById("status-emoji");
+
+    if (data.online) {
+        emoji.textContent = "🔋";
+    } else {
+        emoji.textContent = "🪫";
+    }
+});
 </script>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

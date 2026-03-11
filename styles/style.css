@@ -33,7 +33,7 @@ html {
 }
 
 body {
-    background-image: url("../images/img.jpg");
+    background-image: url("../images/bg5.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,39 +55,26 @@ header .top{
     margin: 20px;
 }
 
-header a {
-    font-family: MC;
-    font-size: large;
-    color: #fff2f2;
-    text-decoration: none;
-}
-
-header a button {
-    text-decoration: none;
-}
-
-header a button:hover {
-    text-decoration: underline;
-}
-
 header button {
-    font-family: MC;
-    letter-spacing: 1px;
-    position: relative;
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    border-radius: 20px;
-    background-color: transparent;
-    border: none;
-    transition: 0.3s ease all;
-    text-decoration: underline;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 
-header button:hover {
+header a {
+    color: #fff;
+    font-size: 18px;
     text-decoration: none;
-    transition: 0.3s ease all;
+    margin-right: 10px;
+}
+
+header a span {
+    font-family: MC;
+    text-decoration: none;
+}
+
+header a span:hover {
+    text-decoration: underline;
 }
 
 .hero {
@@ -101,9 +88,12 @@ header button:hover {
 }
 
 .hero-content h3 {
-    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
     font-weight: 700;
-    color: #ffffff;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .hero-content p {
@@ -166,10 +156,10 @@ i {
 }
 
 .tooltip-text {
-    font-family: "JetBrainsMono", monospace;
+    font-family: MC;
     visibility: hidden;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(6, 8, 19);
     color: #fff;
     text-align: center;
     border-radius: 5px;
@@ -185,7 +175,12 @@ i {
 
 #myInput:hover + .tooltip-text {
     visibility: visible;
-    opacity: 0.8; /* Show tooltip on hover */
+    opacity: 1; /* Show tooltip on hover */
+}
+
+#myInput2:hover + .tooltip-text {
+    visibility: visible;
+    opacity: 1; /* Show tooltip on hover */
 }
 
 .ip .ipaddr {
@@ -228,7 +223,8 @@ i {
     align-items: center;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .faq-question h3 {
@@ -238,7 +234,8 @@ i {
 }
 
 .faq-answer {
-    border-radius: 8px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     max-height: 0; /* Initially collapsed */
     overflow: hidden; /* Hide overflowing content */
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin-bottom 0.3s ease;
@@ -255,7 +252,7 @@ i {
 }
 
 .faq-item .faq-answer {
-    background-color: rgba(112, 27, 182, 0.2);
+    background-color: rgba(217, 202, 229, 0.2);
 }
 
 .faq-answer.open {
@@ -305,7 +302,7 @@ i {
     position: absolute;
     inset: 0;
     border-radius: 12px;
-    box-shadow: -10px 10px 100px #6229b8;
+    box-shadow: -10px 10px 100px rgb(124, 96, 103);
 }
 
 .box .imgbx img {
@@ -403,7 +400,7 @@ i {
 footer {
     z-index: 999;
     bottom: auto;
-    background: #340068;
+    background: rgb(6, 8, 19);
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     padding: 20px 0;
     height: auto;
