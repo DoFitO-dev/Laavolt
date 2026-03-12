@@ -7,8 +7,144 @@
     <link rel="stylesheet" href="./styles/map.css">
 </head>
 <body>
+    <section class="map-1">
+        <h1>Real Time Map</h1>
+        <a class="map-button" href="https://map.laavolt.fun" target="_blank">
+            Open Live Map
+        </a>
+    </section>
 
+    <section class="map-2">
+        <h1>Map Overview</h1>
+        <p class="section-desc">
+            Satellite render of the SMP TERRAIN generated using Unmined.
+        </p>
+        <iframe id="unmined-map" class="unm" src="./earth-sat-view/index.html" width="1200" height="600" ></iframe>
+        <div class="map-meta">
+            <div>Seed: 894329482</div>
+            <div>World Size: 20k × 20k blocks</div>
+            <div>Version: Minecraft 1.21.11</div>
+            <div>Projection: Mercator</div>
+        </div>
+    </section>
 
-    
+    <section class="map-geo">
+        <h1>Geological Map</h1>
+
+        <p class="section-desc">
+            Satellite render of the SMP BIOMES generated using Unmined.
+        </p>        
+
+        <div class="atlas-panel">
+
+            <div class="atlas-map">
+                <img src="./earth-sat-view/earth-geo-compo.png" class="geologymap clickable-map">
+            </div>
+
+            <div class="atlas-info">
+
+                <div class="legend">
+                    <h3>Biome Legend</h3>
+
+                    <div class="legend-item">
+                        <span class="color forest"></span>Forest
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color plains"></span>Plains
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color desert"></span>Desert
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color ocean"></span>Ocean
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="color mountains"></span>Mountains
+                    </div>
+
+                </div>
+
+                <!--<div class="metadata">
+                    <h3>World Data</h3>
+
+                    <p>World Size: 20,000 × 20,000</p>
+                    <p>Seed: 894329482</p>
+                    <p>Version: Minecraft 1.21</p>
+                    <p>Projection: Mercator</p>
+
+                </div>-->
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="map-height">
+        <h1>Height Map</h1>
+
+        <p class="section-desc">
+            Satellite render of the SMP HEIGHTMAP generated using Unmined.<br>
+            (More the white, More the height)
+        </p>
+
+        <div class="map-grid">
+            <img src="./earth-sat-view/earth-heightmap.png" class="heightmap clickable-map">
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+
+        <div class="viewer">
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h1>By <span class="dofii">Dofii</span>❤️</h1>
+                <p>© 2026 LaavoltSMP. Some rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const images = document.querySelectorAll(".clickable-map");
+        const closeBtn = document.querySelector(".close");
+
+        // open modal
+        images.forEach(img=>{
+            img.onclick = ()=>{
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            };
+        });
+
+        // close button
+        closeBtn.onclick = ()=>{
+            modal.style.display = "none";
+        };
+
+        // click outside image
+        modal.onclick = (e)=>{
+            if(e.target === modal){
+                modal.style.display = "none";
+            }
+        };
+
+        // ESC key close
+        document.addEventListener("keydown",(e)=>{
+            if(e.key === "Escape"){
+                modal.style.display = "none";
+            }
+        });
+        </script>
+
 </body>
 </html>

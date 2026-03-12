@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: url(../images/pointercursor.png), auto;
+}
+
+@font-face {
+    font-family: MC;
+    src: url("../fonts/minecraft-font/MinecraftRegular-Bmg3.ttf");
+}
+@font-face {
+    font-family: MCBold;
+    src: url("../fonts/minecraft-font/MinecraftBold-nMK1.otf");
+}
+@font-face {
+    font-family: MCItalics;
+    src: url("../fonts/minecraft-font/MinecraftItalic-R8Mo.otf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../images/bg5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section{
+    width:100%;
+    padding:80px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
+
+h1{
+    font-family:MC;
+    color:white;
+    font-size:32px;
+    text-align:center;
+}
+
+.map-card{
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.2);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:16px;
+    padding:20px;
+}
+
+.section-desc{
+    color: rgba(255,255,255,0.7);
+    text-align:center;
+    max-width:700px;
+}
+
+.map-1 {
+    width: 100%;
+    height: 100vh;
+}
+
+.unm{
+    width:90%;
+    max-width:1200px;
+    height:600px;
+
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:14px;
+
+    backdrop-filter:blur(20px);
+    overflow:hidden;
+}
+
+.map-meta{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    color:white;
+    font-family: Geist Mono, monospace;
+    font-size:14px;
+}
+
+.map-meta div{
+    padding:8px 12px;
+    border-radius:8px;
+    background: rgba(255,255,255,0.08);
+}
+
+.heightmap,
+.geologymap{
+    width:90%;
+    max-width:1200px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.heightmap:hover,
+.geologymap:hover,
+.unm:hover{
+    box-shadow: 0 0 40px rgba(255,255,255,0.15);
+    transition: 0.3s;
+}
+
+.heightmap:hover,
+.geologymap:hover{
+    transform:scale(1.03);
+    transition:0.25s;
+}
+
+.map-panel{
+    width:95%;
+    max-width:1400px;
+    backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.25);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+.map-grid{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    flex-wrap:wrap;
+    width:90%;
+}
+
+.map-button{
+    font-family:MC;
+    padding:14px 28px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.2);
+    text-decoration:none;
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+.map-button:hover{
+    box-shadow:0 0 30px rgba(255,255,255,0.2);
+}
+
+.atlas-panel{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.25);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:16px;
+    padding:30px;
+    max-width:1100px;
+}
+
+.atlas-map img{
+    width:600px;
+    max-width:100%;
+    border-radius:10px;
+}
+
+.legend{
+    margin-bottom:30px;
+    color:white;
+}
+
+.legend h3{
+    font-family:MC;
+    margin-bottom:10px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.color{
+    width:16px;
+    height:16px;
+    border-radius:3px;
+    margin-right:10px;
+}
+
+.forest { background:#2e8b57; }
+.plains { background:#9acd32; }
+.desert { background:#e8c97d; }
+.ocean { background:#3a66cc; }
+.mountains { background:#8c8c8c; }
+
+/*.metadata{
+    color:white;
+    font-family:Geist Mono, monospace;
+}
+
+.metadata h3{
+    font-family:MC;
+    margin-bottom:10px;
+}
+
+.metadata p{
+    margin-bottom:5px;
+}*/
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:10000;
+    inset:0;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+}
+
+.viewer{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.modal-content{
+    max-width:100%;
+    max-height:100%;
+    width: 90%;
+    height: 80%;
+    border-radius:10px;
+}
+
+.modal-content:active{
+    cursor:grabbing;
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:10001;
+}
+.clickable-map{
+    transition:0.2s;
+}
+
+.clickable-map:hover{
+    transform:scale(1.02);
+}
+
+/*Footer*/
+
+footer {
+    z-index: 999;
+    bottom: auto;
+    background: rgb(6, 8, 19);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+    height: auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h1 {
+    font-family: MC;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-content .dofii {
+    font-family: MC;
+}
+
+
+.footer-content .dofii:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    font-family: MC;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    .unm {
+        width: 100%;
+    }
+    .map-1 h1 {
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .map-1 h1 {
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .unm {
+        font-size: 1.5rem;
+    }
+}
