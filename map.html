@@ -17,18 +17,18 @@
     <section class="map-1">
         <h1>Real Time Map</h1>
         <a class="map-button" href="https://map.laavolt.fun" target="_blank">
-            Open Live Map
+            Open BlueMap 🗺️
         </a>
+        <a href="#map-2" id="scroll-btn"></a>
     </section>
 
-    <section class="map-2">
+    <section class="map-2" id="map-2">
         <h1>Map Overview</h1>
         <p class="section-desc">
             Satellite render of the SMP TERRAIN generated using Unmined.
         </p>
         <iframe id="unmined-map" class="unm" src="./earth-sat-view/index.html" width="1200" height="600" ></iframe>
         <div class="map-meta">
-            <div>Seed: 894329482</div>
             <div>World Size: 49152 × 24576 blocks</div>
             <div>Version: Minecraft 1.21.11</div>
             <div>Projection: Mercator</div>
@@ -120,6 +120,31 @@
         </div>
     </footer>
     <script>
+        const navbar = document.getElementById("navbar");
+        const scrollBtn = document.getElementById("scroll-btn");
+        const landSection = document.getElementById("land");
+        const heroLogo = document.getElementById("logo");
+        const form = document.getElementById("server-form");
+
+        // ===== SCROLL UI =====
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const landHeight = landSection.offsetHeight;
+
+            if (scrollY > landHeight * 0.4) {
+                navbar.classList.add("show");
+                heroLogo.classList.add("fade");
+            } else {
+                navbar.classList.remove("show");
+                heroLogo.classList.remove("fade");
+            }
+
+            if (scrollY > 50) {
+                scrollBtn.classList.add("hide");
+            } else {
+                scrollBtn.classList.remove("hide");
+            }
+        });
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImg");
         const images = document.querySelectorAll(".clickable-map");
